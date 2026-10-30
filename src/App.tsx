@@ -69,7 +69,7 @@ function Header() {
       <div className="shell header-inner">
         <a className="brand" href="#top" aria-label="ЛИСА — в начало страницы" onClick={close}>
           <img src="/logo-lisa.png" alt="Логотип тату-студии ЛИСА" width="68" height="68" />
-          <span className="brand__caption">ТАТУ-СТУДИЯ<br />НОВОСИБИРСК</span>
+          <span className="brand__caption">ТАТУ-СТУДИЯ</span>
         </a>
         <nav id="site-nav" ref={menuRef} className={`main-nav ${open ? 'main-nav--open' : ''}`} aria-label="Основная навигация">
           <a href="#works" onClick={close}>Работы</a>
@@ -96,21 +96,21 @@ function Hero() {
   return (
     <section className="hero shell" aria-labelledby="hero-title">
       <div className="hero__copy">
-        <p className="eyebrow"><span className="eyebrow__dash" /> ТАТУ-СТУДИЯ · НОВОСИБИРСК</p>
+        <p className="eyebrow"><span className="eyebrow__dash" /> НОВОСИБИРСК · КАРЛА МАРКСА, 30</p>
         <h1 id="hero-title">ЛИСА<span className="hero__dot">.</span></h1>
         <p className="hero__lead">Татуировки, пирсинг<br />и не только.</p>
-        <p className="hero__description">Студия на Маркса, 30. Поможем выбрать эскиз, обсудим идею и подберём удобное время для записи.</p>
+        <p className="hero__description">Поможем выбрать эскиз, обсудим идею и подберём удобное время для записи.</p>
         <div className="hero__actions">
-          <a className="button button--dark" href="#works">Смотреть работы <Arrow diagonal /></a>
-          <a className="text-link" href={telegram} target="_blank" rel="noopener noreferrer">Записаться <Arrow diagonal /></a>
+          <a className="button button--dark" href={telegram} target="_blank" rel="noopener noreferrer">Записаться <Arrow diagonal /></a>
+          <a className="button hero__secondary" href="#works">Смотреть работы <Arrow /></a>
         </div>
       </div>
-      <div className="hero__visual" aria-label="Места для двух фотографий работ студии">
+      <div className="hero__visual" aria-label="Фотографии работ студии">
         <Photo className="hero__photo hero__photo--first" src="/images/hero/hero-tattoo-01.webp" file="hero-tattoo-01.webp" kind="ФОТО РАБОТЫ / 01" alt="Татуировка студии ЛИСА" eager />
         <Photo className="hero__photo hero__photo--second" src="/images/hero/hero-tattoo-02.webp" file="hero-tattoo-02.webp" kind="ФОТО РАБОТЫ / 02" alt="Татуировка студии ЛИСА" eager />
         <span className="hero__photo-note">РАБОТЫ СТУДИИ</span>
       </div>
-      <div className="hero__foot"><span>01 / 08</span><span>ПРОКРУТИТЬ ВНИЗ ↓</span></div>
+      <div className="hero__foot"><span>ТАТУИРОВКИ · ПИРСИНГ · ПЕРМАНЕНТ</span><a href="#works">СМОТРЕТЬ РАБОТЫ <span aria-hidden="true">↓</span></a></div>
     </section>
   );
 }
