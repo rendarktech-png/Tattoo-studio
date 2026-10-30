@@ -28,7 +28,7 @@ a:hover .arrow,button:hover .arrow{transform:translate(3px,-2px)}
 .site-header{position:sticky;top:0;z-index:50;background:#f3f0ea;border-bottom:1px solid #d8d4cd}
 .header-inner{height:92px;display:flex;align-items:center;justify-content:space-between;gap:32px}
 .brand{display:inline-flex;align-items:center;gap:14px;flex-shrink:0}
-.brand img{width:62px;height:62px;object-fit:cover;background:#111}
+.brand img{width:62px;height:62px;object-fit:cover;border-radius:50%;background:#111}
 .brand__caption{font-size:.57rem;line-height:1.45;letter-spacing:.08em;font-weight:800}
 .main-nav{display:flex;align-items:center;gap:clamp(22px,2.5vw,44px);margin-left:auto}
 .main-nav>a{font-size:.79rem;font-weight:700;transition:color .2s}
@@ -148,7 +148,7 @@ a:hover .arrow,button:hover .arrow{transform:translate(3px,-2px)}
 .footer{background:#171717;color:#f5f2eb}
 .footer__top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;padding-block:55px 70px}
 .footer__brand{display:flex;align-items:center;gap:20px;align-self:start;font-size:.8rem;line-height:1.5}
-.footer__brand img{width:90px;height:90px}
+.footer__brand img{width:90px;height:90px;border-radius:50%}
 .footer__top nav,.footer__top>div{display:flex;flex-direction:column;align-items:flex-start;gap:13px;font-size:.8rem}
 .footer__top a:hover,.footer__bottom a:hover{color:#cc806a}
 .footer__bottom{display:flex;justify-content:space-between;gap:20px;padding-block:20px;border-top:1px solid #4f4d49;color:#aaa59f;font-size:.68rem}
