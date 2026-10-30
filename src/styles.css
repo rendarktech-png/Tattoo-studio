@@ -28,15 +28,15 @@ a:hover .arrow,button:hover .arrow{transform:translate(3px,-2px)}
 .site-header{position:sticky;top:0;z-index:50;background:#f3f0ea;border-bottom:1px solid #d8d4cd}
 .header-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:32px}
 .brand{display:inline-flex;align-items:center;gap:14px;flex-shrink:0}
-.brand img{width:54px;height:54px;object-fit:cover;border-radius:50%;background:#111}
+.brand img{width:54px;height:54px;object-fit:cover;border:1px solid #171717;border-radius:0;background:#111;box-shadow:4px 4px 0 #b85539}
 .brand__caption{font-size:.64rem;line-height:1.4;letter-spacing:.065em;font-weight:800}
 .main-nav{display:flex;align-items:center;gap:clamp(22px,2.5vw,44px);margin-left:auto}
 .main-nav>a{font-size:.79rem;font-weight:700;transition:color .2s}
 .main-nav>a:hover{color:#b85539}
 .main-nav__mobile-cta{display:none!important}
-.header-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:26px;min-width:142px;min-height:43px;padding:9px 13px;border:1px solid #171717;font-size:.75rem;font-weight:800;transition:background .2s,color .2s}
-.header-cta:hover{background:#171717;color:#fff}
-.header-cta:active{background:#b85539;border-color:#b85539;color:#fff}
+.header-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;min-width:154px;min-height:44px;padding:10px 15px;border:1px solid #171717;background:#171717;color:#f5f2eb;font-size:.75rem;font-weight:800;transition:background .2s,border-color .2s,color .2s}
+.header-cta:hover{background:#b85539;border-color:#b85539;color:#fff}
+.header-cta:active{background:#9d432b;border-color:#9d432b;color:#fff}
 .menu-toggle{display:none}
 .hero{min-height:min(760px,calc(100svh - 82px));display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);grid-template-rows:1fr auto;column-gap:clamp(36px,4.5vw,76px);align-items:center;padding-top:44px}
 .hero__copy{padding-bottom:46px;animation:hero-enter .5s ease-out both}
@@ -158,7 +158,7 @@ a:hover .arrow,button:hover .arrow{transform:translate(3px,-2px)}
 .footer{background:#171717;color:#f5f2eb}
 .footer__top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;padding-block:55px 70px}
 .footer__brand{display:flex;align-items:center;gap:20px;align-self:start;font-size:.8rem;line-height:1.5}
-.footer__brand img{width:90px;height:90px;border-radius:50%}
+.footer__brand img{width:90px;height:90px;border:1px solid #4f4d49;border-radius:0;box-shadow:5px 5px 0 #b85539}
 .footer__top nav,.footer__top>div{display:flex;flex-direction:column;align-items:flex-start;gap:13px;font-size:.8rem}
 .footer__top a:hover,.footer__bottom a:hover{color:#cc806a}
 .footer__bottom{display:flex;justify-content:space-between;gap:20px;padding-block:20px;border-top:1px solid #4f4d49;color:#aaa59f;font-size:.68rem}
