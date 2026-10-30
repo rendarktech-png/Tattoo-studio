@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 
 const telegram = 'https://t.me/lisa_13_lisa';
 const map = 'https://2gis.ru/novosibirsk/search/%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9A%D0%B0%D1%80%D0%BB%D0%B0%20%D0%9C%D0%B0%D1%80%D0%BA%D1%81%D0%B0%2C%2030';
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 const works = Array.from({ length: 12 }, (_, index) => ({
-  src: `/images/works/work-${String(index + 1).padStart(2, '0')}.webp`,
+  src: asset(`images/works/work-${String(index + 1).padStart(2, '0')}.webp`),
   number: String(index + 1).padStart(2, '0'),
 }));
 
@@ -45,7 +46,7 @@ function Header() {
     <header className="site-header">
       <div className="shell header-inner">
         <a className="brand" href="#top" aria-label="ЛИСА — в начало страницы" onClick={close}>
-          <img src="/logo-lisa.png" alt="Логотип тату-студии ЛИСА" width="68" height="68" />
+          <img src={asset('logo-lisa.png')} alt="Логотип тату-студии ЛИСА" width="68" height="68" />
           <span className="brand__caption">ТАТУ-СТУДИЯ</span>
         </a>
         <nav id="site-nav" className={`main-nav ${open ? 'main-nav--open' : ''}`} aria-label="Основная навигация">
@@ -83,8 +84,8 @@ function Hero() {
         </div>
       </div>
       <div className="hero__visual" aria-label="Фотографии работ студии">
-        <Photo className="hero__photo hero__photo--first" src="/images/hero/hero-tattoo-01.webp" alt="Татуировка студии ЛИСА" eager />
-        <Photo className="hero__photo hero__photo--second" src="/images/hero/hero-tattoo-02.webp" alt="Татуировка студии ЛИСА" eager />
+        <Photo className="hero__photo hero__photo--first" src={asset('images/hero/hero-tattoo-01.webp')} alt="Татуировка студии ЛИСА" eager />
+        <Photo className="hero__photo hero__photo--second" src={asset('images/hero/hero-tattoo-02.webp')} alt="Татуировка студии ЛИСА" eager />
       </div>
       <div className="hero__foot"><span>ТАТУИРОВКИ · ЭСКИЗЫ · СТИЛЬ</span><a href="#works">СМОТРЕТЬ РАБОТЫ <span aria-hidden="true">↓</span></a></div>
     </section>
@@ -143,7 +144,7 @@ function Portfolio() {
 
 function About() {
   return (
-    <section className="about section-pad" id="about" aria-labelledby="about-title"><div className="shell about__grid"><div className="about__copy"><p className="eyebrow">03 / О СТУДИИ</p><h2 id="about-title">ЛИСА — студия<br />на Маркса, 30<span className="hero__dot">.</span></h2><p>Здесь можно обсудить будущую татуировку, выбрать эскиз и познакомиться с работами мастеров.</p><p>Мы находимся недалеко от метро «Студенческая». Работаем по предварительной записи.</p><a className="inline-link" href="#contacts">Как нас найти <Arrow diagonal /></a></div><div className="about__visual"><Photo src="/images/studio/studio-interior-01.webp" alt="Интерьер тату-студии ЛИСА" /><div className="about__address"><span>НОВОСИБИРСК</span><strong>КАРЛА МАРКСА, 30<br />ОФИС 405</strong><span>ПО ПРЕДВАРИТЕЛЬНОЙ ЗАПИСИ</span></div></div></div></section>
+    <section className="about section-pad" id="about" aria-labelledby="about-title"><div className="shell about__grid"><div className="about__copy"><p className="eyebrow">03 / О СТУДИИ</p><h2 id="about-title">ЛИСА — студия<br />на Маркса, 30<span className="hero__dot">.</span></h2><p>Здесь можно обсудить будущую татуировку, выбрать эскиз и познакомиться с работами мастеров.</p><p>Мы находимся недалеко от метро «Студенческая». Работаем по предварительной записи.</p><a className="inline-link" href="#contacts">Как нас найти <Arrow diagonal /></a></div><div className="about__visual"><Photo src={asset('images/studio/studio-interior-01.webp')} alt="Интерьер тату-студии ЛИСА" /><div className="about__address"><span>НОВОСИБИРСК</span><strong>КАРЛА МАРКСА, 30<br />ОФИС 405</strong><span>ПО ПРЕДВАРИТЕЛЬНОЙ ЗАПИСИ</span></div></div></div></section>
   );
 }
 
@@ -180,7 +181,7 @@ function Contacts() {
 }
 
 function Footer() {
-  return <footer className="footer"><div className="shell footer__top"><a className="footer__brand" href="#top"><img src="/logo-lisa.png" alt="Логотип тату-студии ЛИСА" width="90" height="90" /><span>Тату-студия<br />в Новосибирске</span></a><nav aria-label="Навигация внизу страницы"><a href="#works">Работы</a><a href="#booking">Запись</a><a href="#about">О студии</a><a href="#contacts">Контакты</a></nav><div><a href="tel:+79537961133">+7 (953) 796-11-33</a><a href={telegram} target="_blank" rel="noopener noreferrer">Telegram ↗</a></div></div><div className="shell footer__bottom"><span>© {new Date().getFullYear()} ЛИСА</span><span>Новосибирск · Карла Маркса, 30</span><a href="#top">Наверх ↑</a></div></footer>;
+  return <footer className="footer"><div className="shell footer__top"><a className="footer__brand" href="#top"><img src={asset('logo-lisa.png')} alt="Логотип тату-студии ЛИСА" width="90" height="90" /><span>Тату-студия<br />в Новосибирске</span></a><nav aria-label="Навигация внизу страницы"><a href="#works">Работы</a><a href="#booking">Запись</a><a href="#about">О студии</a><a href="#contacts">Контакты</a></nav><div><a href="tel:+79537961133">+7 (953) 796-11-33</a><a href={telegram} target="_blank" rel="noopener noreferrer">Telegram ↗</a></div></div><div className="shell footer__bottom"><span>© {new Date().getFullYear()} ЛИСА</span><span>Новосибирск · Карла Маркса, 30</span><a href="#top">Наверх ↑</a></div></footer>;
 }
 
 function App() {
