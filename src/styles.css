@@ -204,7 +204,7 @@ a:hover .arrow,button:hover .arrow{transform:translate(3px,-2px)}
 }
 @media(max-width:600px){
   html{scroll-padding-top:0}
-  .portfolio[id]{scroll-margin-top:70px}
+  .portfolio[id]{scroll-margin-top:24px}
   .shell{width:calc(100% - 36px)}
   .section-pad{padding-block:78px}
   .header-inner{height:70px;gap:12px}
