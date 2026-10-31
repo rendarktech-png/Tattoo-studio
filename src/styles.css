@@ -235,7 +235,7 @@ a:hover .arrow,button:hover .arrow{transform:translate(3px,-2px)}
   .about__address{width:56%;min-height:145px;padding:13px;gap:14px}
   .about__address strong{font-size:.96rem}
   .booking__grid{display:block}
-  .booking{min-height:calc(100svh - 70px);scroll-margin-top:70px}
+  .booking{min-height:calc(100svh - 70px);scroll-margin-top:8px}
   .faq__grid{gap:27px}
   .faq__list summary{grid-template-columns:26px minmax(0,1fr) 22px;gap:9px;padding:21px 0;font-size:.92rem}
   .contacts{padding-top:0;scroll-margin-top:18px}
