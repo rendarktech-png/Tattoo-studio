@@ -211,7 +211,7 @@ a:hover .arrow,button:hover .arrow{transform:translate(3px,-2px)}
   .brand img{width:48px;height:48px}
   .main-nav{top:70px;padding-inline:18px}
   .header-cta{min-width:108px;min-height:38px;padding:9px 12px}
-  .hero{padding-top:38px}
+  .hero{padding-top:18px}
   .hero__copy{height:auto;display:flex;gap:18px;padding:0 0 36px}
   .hero .eyebrow{font-size:.62rem}
   .hero h1{font-size:clamp(4.6rem,23vw,8rem)}
