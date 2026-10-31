@@ -228,17 +228,13 @@ a:hover .arrow,button:hover .arrow{transform:translate(3px,-2px)}
   .portfolio{padding-top:65px}
   .portfolio__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   .work__meta{font-size:.52rem;padding:10px 0 13px}
-  .about.section-pad{min-height:calc(100svh - 70px);padding-block:16px;scroll-margin-top:70px;display:grid;align-items:center}
-  .about__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
-  .about__copy{display:flex;flex-direction:column;gap:12px}
-  .about__copy>.eyebrow{margin:0}
-  .about h2{font-size:clamp(1.9rem,8.2vw,2.5rem);line-height:1.08}
-  .about__copy>p:not(.eyebrow){margin:0;font-size:clamp(.82rem,3.5vw,.9rem);line-height:1.5}
-  .about__copy>.inline-link{align-self:flex-start;margin:0;padding:11px 16px;min-height:44px}
-  .about__visual{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:12px;margin:0;padding:0}
-  .about__visual>.photo{width:100%;height:auto;aspect-ratio:1/1;margin:0}
-  .about__address{position:static;width:100%;min-height:0;padding:12px;gap:12px}
-  .about__address strong{font-size:clamp(.85rem,3.5vw,1.1rem)}
+  .about.section-pad{scroll-margin-top:8px}
+  .about__grid{display:block}
+  .about__copy>p:not(.eyebrow){font-size:.9rem}
+  .about__visual{margin-top:48px}
+  .about__visual>.photo{width:84%;aspect-ratio:1/1}
+  .about__address{width:56%;min-height:145px;padding:13px;gap:14px}
+  .about__address strong{font-size:.96rem}
   .booking__grid{display:block}
   .booking{min-height:calc(100svh - 70px);scroll-margin-top:8px}
   .faq__grid{gap:27px}
