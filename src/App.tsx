@@ -134,8 +134,8 @@ function Portfolio() {
       <dialog className="lightbox" ref={dialog} aria-label="Просмотр работ" onClose={() => { setActive(null); opener.current?.focus(); }} onClick={event => { if (event.target === dialog.current) close(); }}>
         {active !== null && <div className="lightbox__inner" onTouchStart={event => { touchStart.current = event.touches[0]?.clientX ?? null; }} onTouchEnd={event => { if (touchStart.current === null) return; const distance = event.changedTouches[0].clientX - touchStart.current; if (Math.abs(distance) > 50) move(distance < 0 ? 1 : -1); touchStart.current = null; }}>
           <div className="lightbox__top"><span>ЛИСА / РАБОТЫ <span className="lightbox__count">{works[active].number} / 12</span></span><button type="button" onClick={close} aria-label="Закрыть галерею">Закрыть ×</button></div>
-          <div className="lightbox__stage"><button className="lightbox__arrow lightbox__arrow--prev" type="button" onClick={() => move(-1)} aria-label="Предыдущая фотография">←</button><Photo key={works[active].src} src={works[active].src} alt={`Работа студии ЛИСА, фото ${works[active].number}`} /><button className="lightbox__arrow lightbox__arrow--next" type="button" onClick={() => move(1)} aria-label="Следующая фотография">→</button></div>
-          <p className="lightbox__hint">Листай стрелками на клавиатуре или свайпом</p>
+          <div className="lightbox__stage"><button className="lightbox__arrow lightbox__arrow--prev" type="button" onClick={() => move(-1)} aria-label="Предыдущая фотография">←<span>Назад</span></button><Photo key={works[active].src} src={works[active].src} alt={`Работа студии ЛИСА, фото ${works[active].number}`} eager /><button className="lightbox__arrow lightbox__arrow--next" type="button" onClick={() => move(1)} aria-label="Следующая фотография"><span>Далее</span>→</button></div>
+          <p className="lightbox__hint"><span className="lightbox__hint--desktop">Листай стрелками на клавиатуре или свайпом</span><span className="lightbox__hint--mobile">Листайте кнопками или смахните фото в сторону</span></p>
         </div>}
       </dialog>
     </section>

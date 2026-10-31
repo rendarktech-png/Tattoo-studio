@@ -73,18 +73,19 @@ a:hover .arrow,button:hover .arrow{transform:translate(3px,-2px)}
 .work__meta .arrow{font-size:1rem;margin:0}
 .work:hover .photo{background:#d4c9ba}
 .work:hover .work__meta{color:#b85539}
-.lightbox{position:fixed;inset:0;width:100vw;max-width:none;height:100vh;max-height:none;margin:0;padding:0;border:0;background:radial-gradient(circle at 50% 42%,#2b2a28 0%,#20201f 48%,#171716 100%);color:#f5f2eb}
+.lightbox{position:fixed;inset:0;width:100%;max-width:none;height:100vh;height:100dvh;max-height:none;margin:0;padding:0;border:0;background:radial-gradient(circle at 50% 42%,#2b2a28 0%,#20201f 48%,#171716 100%);color:#f5f2eb}
 .lightbox::backdrop{background:rgba(13,13,13,.9)}
 .lightbox__inner{width:min(100% - 50px,1150px);height:100%;margin:auto;display:flex;flex-direction:column}
-.lightbox__top{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:80px;font-size:.72rem;font-weight:800;letter-spacing:.06em}
+.lightbox__top{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:80px;flex-shrink:0;font-size:.72rem;font-weight:800;letter-spacing:.06em}
 .lightbox__count{color:#a39d95;margin-left:20px}
 .lightbox__top button{border:0;background:transparent;color:inherit;padding:12px;font-size:.8rem;font-weight:800}
 .lightbox__stage{display:grid;grid-template-columns:55px minmax(0,1fr) 55px;align-items:center;justify-items:center;min-height:0;flex:1;gap:15px}
-.lightbox__stage>.photo{height:min(100%,calc(100vh - 150px));width:min(100%,750px);aspect-ratio:3/4;background:#3b3a37}
-.lightbox__stage>.photo img{object-fit:cover}
+.lightbox__stage>.photo{height:100%;width:100%;min-height:0;background:transparent}
+.lightbox__stage>.photo img{object-fit:contain}
+.lightbox__arrow span,.lightbox__hint--mobile{display:none}
 .lightbox__arrow{border:1px solid #77736e;background:transparent;color:#fff;width:48px;height:48px;font-size:1.5rem;transition:background .2s}
 .lightbox__arrow:hover{background:#b85539}
-.lightbox__hint{height:47px;margin:0;text-align:center;font-size:.68rem;color:#a39d95}
+.lightbox__hint{flex-shrink:0;margin:0;padding:14px 0 20px;text-align:center;font-size:.68rem;color:#a39d95}
 .about__grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(40px,8vw,140px);align-items:center}
 .about h2{font-size:clamp(3rem,5.1vw,5.8rem)}
 .about__copy>p:not(.eyebrow){max-width:490px;color:#5f5b55;font-size:.98rem;line-height:1.75;text-wrap:pretty}
@@ -246,12 +247,19 @@ a:hover .arrow,button:hover .arrow{transform:translate(3px,-2px)}
   .footer__brand{grid-column:1/-1}
   .footer__brand img{width:70px;height:70px}
   .footer__bottom{display:flex;flex-wrap:wrap;justify-content:space-between}
-  .lightbox__inner{width:calc(100% - 20px)}
-  .lightbox__top{min-height:65px}
-  .lightbox__stage{grid-template-columns:36px minmax(0,1fr) 36px;gap:3px}
-  .lightbox__arrow{width:34px;height:44px;border:0;font-size:1.3rem}
-  .lightbox__stage>.photo{height:min(100%,calc(100vh - 120px))}
-  .lightbox__hint{height:38px;font-size:.56rem}
+  .lightbox__inner{width:calc(100% - 32px);padding-bottom:env(safe-area-inset-bottom)}
+  .lightbox__top{min-height:65px;gap:8px;font-size:.65rem}
+  .lightbox__count{margin-left:10px;white-space:nowrap}
+  .lightbox__top button{padding:12px 0;font-size:.75rem}
+  .lightbox__stage{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(0,1fr) auto;gap:16px 12px}
+  .lightbox__stage>.photo{grid-column:1/-1;grid-row:1;height:100%;width:100%;align-self:stretch}
+  .lightbox__arrow{grid-row:2;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;height:48px;border:1px solid #77736e;font-size:1rem}
+  .lightbox__arrow--prev{grid-column:1}
+  .lightbox__arrow--next{grid-column:2}
+  .lightbox__arrow span{display:inline;font-size:.85rem;font-weight:700}
+  .lightbox__hint{font-size:.65rem;padding:12px 0 16px}
+  .lightbox__hint--desktop{display:none}
+  .lightbox__hint--mobile{display:inline}
 }
 @media(max-width:420px){.hero__actions{display:grid;grid-template-columns:1fr 1fr}.hero__actions .button{min-width:0;font-size:.72rem}.hero__actions .arrow{margin-left:0}.hero__foot span:first-child{max-width:155px;line-height:1.5}}
 @media(max-width:360px){.hero__actions{grid-template-columns:1fr}.hero__actions .button{font-size:.82rem}}
